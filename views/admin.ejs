@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Admin Login Page</title>
+	<!--Made with love by Mutiullah Samim -->
+
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet">
+	<style>
+		/* Made with love by Mutiullah Samim*/
+
+		@import url('https://fonts.googleapis.com/css?family=Numans');
+
+		html,
+		body {
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100%;
+			font-family: 'Numans', sans-serif;
+			background-image: url('https://www.gmvk.co.in/images/library-home.jpg');
+
+			/* background: #40E0D0 !important; */
+			font-family: 'Muli', sans-serif;
+
+		}
+
+
+		.container {
+			height: 100%;
+			align-content: center;
+		}
+
+		.card {
+			height: 390px;
+			position: absolute;
+			margin-top: auto;
+			margin-bottom: auto;
+			width: 400px;
+			background-color: rgba(0, 0, 0, 0.5) !important;
+		}
+
+		.social_icon span {
+			font-size: 60px;
+			margin-left: 10px;
+			color: #FFC312;
+		}
+
+		.social_icon span:hover {
+			color: white;
+			cursor: pointer;
+		}
+
+		.card-header h3 {
+			color: white;
+		}
+
+		.social_icon {
+			position: absolute;
+			right: 20px;
+			top: -45px;
+		}
+
+		.input-group-prepend span {
+			width: 50px;
+			background-color: #FFC312;
+			color: black;
+			border: 0 !important;
+		}
+
+		input:focus {
+			outline: 0 0 0 0 !important;
+			box-shadow: 0 0 0 0 !important;
+
+		}
+
+		.remember {
+			color: white;
+		}
+
+		.remember input {
+			width: 20px;
+			height: 20px;
+			margin-left: 15px;
+			margin-right: 5px;
+		}
+
+		.login_btn {
+			color: black;
+			background-color: #FFC312;
+			width: 100px;
+		}
+
+		.login_btn:hover {
+			color: black;
+			background-color: white;
+		}
+
+		.links {
+			color: white;
+		}
+
+		.links a {
+			margin-left: 4px;
+		}
+		footer {
+        background: rgb(9, 95, 234);
+        color: white;
+        margin-top: 100px;
+       
+        /* width: 1163px;
+        height: 430px; */
+    }
+
+    footer a {
+        color: #fff;
+        font-size: 14px;
+        transition-duration: 0.2s;
+    }
+
+    footer a:hover {
+        color: #FA944B;
+        text-decoration: none;
+    }
+
+    .copy {
+        font-size: 12px;
+        padding: 10px;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .footer-middle {
+        padding-top: 2em;
+        color: white;
+    }
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+    .social-network a.icoFacebook:hover {
+        background-color: #3B5998;
+    }
+
+    .social-network a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoFacebook:hover i {
+        color: #fff;
+    }
+
+    .social-network a.icoLinkedin:hover i {
+        color: #fff;
+    }
+
+    .social-network a.socialIcon:hover {
+        color: #44BCDD;
+    }
+
+    .socialHoverClass {
+        color: #44BCDD;
+    }
+
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;  
+  height: 30px;  
+        font-size: 15px;
+    }
+
+    .social-circle li i {
+        margin: 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .social-circle li a:hover i {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms--transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .triggeredHover {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms--transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .social-circle i {
+        color: #595959;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    .social-network a {
+        background-color: #F9F9F9;
+    }
+
+    .social-network a:hover {
+        background: #ff304d;
+    }
+	</style>
+</head>
+
+<body>
+	<div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand">
+					<h3>Online Library Management System</h3>
+				</a>
+				<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<div class="navbar-nav">
+						<a href="/index" class="nav-item nav-link">Home</a>
+						<a href="/login" class="nav-item nav-link">Student LogIn</a>
+						<!-- <a href="admin" class="nav-item nav-link">Admin LogIn</a> -->
+						<a href="/register" class="nav-item nav-link">Student Registration</a>
+
+					</div>
+					<div class="navbar-nav ms-auto">
+						<a href="/adminreg" class="nav-item nav-link">Admin Registration</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		<form action="/admin" method="post">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header">
+						<h1 style="color:white;">Admin Log In</h1>
+						<div class="d-flex justify-content-end social_icon">
+							<span><i class="fab fa-facebook-square"></i></span>
+							<span><i class="fab fa-google-plus-square"></i></span>
+							<span><i class="fab fa-twitter-square"></i></span>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<form>
+
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Enter Email Address" name="email1">
+							</div>
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input type="password" class="form-control" placeholder="Password" name="password1">
+							</div>
+							<div class="row align-items-center remember">
+								<input type="checkbox">Remember Me
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Login" class="btn float-right login_btn">
+							</div>
+						</form>
+					</div>
+					<div class="card-footer">
+						<div class="d-flex justify-content-center links">
+							Don't have an account?<a href="/adminreg">Sign Up</a>
+						</div>
+						<div class="d-flex justify-content-center">
+							<a href="#">Forgot your password?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div>
+    
+		<footer class="mainfooter" role="contentinfo">
+		  <div class="footer-middle">
+			  <div class="container">
+				  <div class="row">
+					  <div class="col-md-3 col-sm-6">
+						  <div class="footer-pad">
+							  <h4>Quick Links</h4>
+							  <ul class="list-unstyled">
+								  <li> <a href="#"> </a> </li>
+								  <li> <a href="#">Home</a></li>
+								  <li> <a href="#"> Catalog</a></li>
+								  <li> <a href="#">About Us</a></li>
+								  <li> <a href="#">News and Updates</a></li>
+								  <li> <a href="#">Contact Us</a></li>
+							  </ul>
+						  </div>
+					  </div>
+					  <div class="col-md-3 col-sm-6">
+						  <div class="footer-pad">
+							  <h4>Connect with Us</h4>
+							  <ul class="list-unstyled">
+								  <li><a href="#">Facebook</a> </li>
+								  <li><a href="#">Twitter</a> </li>
+								  <li><a href="#">Instagram</a></li>
+								  <li><a href="#">LinkedIn</a></li>
+								 
+							  </ul>
+						  </div>
+					  </div>
+					  <div class="col-md-3 col-sm-6">
+						  <div class="footer-pad">
+							  <h4>Contact Information</h4>
+							  <ul class="list-unstyled">
+								  <li> <a href="#"> Phone : 78787878 </a> </li>
+								  <li> <a href="#">Email : library@gmail.com</a> </li>
+								  
+								 
+							  </ul>
+						  </div>
+					  </div>
+					  <div class="col-md-3">
+						  <h4> Follow Us </h4>
+						  <ul class="social-network social-circle">
+							  <li> <a href="#" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook">
+									  </i> </a> </li>
+							  <li> <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin">
+									  </i> </a> </li>
+							  <li> <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a> </li>
+						  </ul>
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-12 copy">
+						  <p class="text-center"> © 2023 YourLibrary </p>
+						  <p class="text-center"> Privacy Policy </p>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </footer>
+	  </div>
+	</form>
+</body>
+
+</html>

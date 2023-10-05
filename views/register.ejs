@@ -1,0 +1,366 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title> Bootstrap 4 Registration Form Example </title>
+    <style>
+        .note {
+            text-align: center;
+            height: 50px;
+            background: -webkit-linear-gradient(left,#9acd32,#0072ff);
+            color: #fff;
+            font-weight: bold;
+            line-height: 80px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            /* font-size: 12px;
+            line-height: 1.8em;
+            text-transform: none;
+            letter-spacing: .075em;
+            font-weight: bold; */
+            /* font-style: normal; */
+            text-decoration: none;
+            color: #e7bd74;
+            background-color: rgba(34, 28, 28);
+            display: block;
+            background-size: cover;
+      background-repeat: no-repeat;
+      /* height: 100%; */
+      font-family: 'Numans', sans-serif;
+      background-image: url('https://i.pinimg.com/originals/5b/73/0a/5b730a6d09c1b41f93ec57d2a91f8ea5.jpg');
+      /* background: #40E0D0 !important; */
+      font-family: 'Muli', sans-serif;
+        }
+
+        .title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-content {
+            padding: 5%;
+            border: 1px solid greenyellow;
+            margin-bottom: 2%;
+        }
+
+        .form-control {
+            border-radius: 1.5rem;
+        }
+
+        .btnSubmit {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1%;
+            width: 20%;
+            cursor: pointer;
+            background: #0062cc;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 3px;
+            /* color:; */
+            text-transform: uppercase;
+            padding-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+        footer {
+        background: rgb(9, 95, 234);
+       
+        color: white;
+        margin-top: 35px;
+       
+        /* width: 1163px;
+        height: 430px; */
+    }
+
+    footer a {
+        color: #fff;
+        font-size: 14px;
+        transition-duration: 0.2s;
+    }
+
+    footer a:hover {
+        color: #FA944B;
+        text-decoration: none;
+    }
+
+    .copy {
+        font-size: 12px;
+        padding: 10px;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .footer-middle {
+        padding-top: 2em;
+        color: white;
+    }
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+    .social-network a.icoFacebook:hover {
+        background-color: #3B5998;
+    }
+
+    .social-network a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoFacebook:hover i {
+        color: #fff;
+    }
+
+    .social-network a.icoLinkedin:hover i {
+        color: #fff;
+    }
+
+    .social-network a.socialIcon:hover {
+        color: #44BCDD;
+    }
+
+    .socialHoverClass {
+        color: #44BCDD;
+    }
+
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;  
+  height: 30px;  
+        font-size: 15px;
+    }
+
+    .social-circle li i {
+        margin: 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .social-circle li a:hover i {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms--transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .triggeredHover {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms--transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .social-circle i {
+        color: #595959;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    .social-network a {
+        background-color: #F9F9F9;
+    }
+
+    .social-network a:hover {
+        background: #ff304d;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+               
+                <h2> Online Library Management System</h2>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="/index" class="nav-item nav-link">Home</a>
+                    <a href="/login" class="nav-item nav-link">Student LogIn</a>
+                    <a href="admin" class="nav-item nav-link">Admin LogIn</a>
+                    <!-- <a href="/register" class="nav-item nav-link">StudentRegistration</a> -->
+
+
+
+                    <a href="/adminreg" class="nav-item nav-link">Admin Registration</a>
+
+                </div>
+            </div>
+    </nav>
+    <br>
+    <form action="/register" method="POST">
+        <div class="container register-form">
+            
+            <div class="form">
+                <div class="note">
+                    <h1>Student Registration Form<Form></Form>
+                    </h1>
+
+                </div>
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name *" value="" name="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Phone Number *" value=""
+                                    name="phonenumber">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Password *" value=""
+                                    name="password">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Confirm Password *" value=""
+                                    name="confirmpassword">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder=" Enter Email Address *" name="email">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder=" Address *" name="address">
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mt-4">
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    I hereby agree to the <a href="/"> Terms and Conditions. </a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btnSubmit" value="Register"> Submit </button>
+                            <p class="small-xl pt-3 text-center">  
+                                <span > Already Logged In ->     </span>  
+                                 <a href="/login"> Log in </a> 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4>Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> </a> </li>
+                                <li> <a href="#">Home</a></li>
+                                <li> <a href="#"> Catalog</a></li>
+                                <li> <a href="#">About Us</a></li>
+                                <li> <a href="#">News and Updates</a></li>
+                                <li> <a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4>Connect with Us</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Facebook</a> </li>
+                                <li><a href="#">Twitter</a> </li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4>Contact Information</h4>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> Phone : 78787878 </a> </li>
+                                <li> <a href="#">Email : library@gmail.com</a> </li>
+                                
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4> Follow Us </h4>
+                        <ul class="social-network social-circle">
+                            <li> <a href="#" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook">
+                                    </i> </a> </li>
+                            <li> <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin">
+                                    </i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 copy">
+                        <p class="text-center"> © 2023 YourLibrary </p>
+                        <p class="text-center"> Privacy Policy </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
